@@ -10,14 +10,17 @@ packages = [{include = "app", from = "src"}]
 python = "^3.11"
 fastapi = "0.105.0"
 pydantic-settings = "2.7.0"
+uvicorn = "0.34.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "0.8.3"
-uvicorn = "0.34.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "^6.0.0"
 pytest-mock = "*"
+
+[tool.poetry.group.docker]
+optional = true
 
 [tool.poetry.group.docker.dependencies]
 gunicorn="23.0.0"
@@ -25,3 +28,4 @@ gunicorn="23.0.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
